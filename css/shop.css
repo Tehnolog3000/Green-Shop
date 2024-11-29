@@ -109,7 +109,8 @@ aside nav h2{
     gap: 5px;
     color: rgba(61, 61, 61, 1);
     margin-left: auto;
-    align-items: flex-start;
+    margin-bottom: 7px;
+    align-items: center;
 }
 
 .sort-container label {
