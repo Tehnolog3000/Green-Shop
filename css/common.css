@@ -13,15 +13,12 @@
 }
 .main-menu{
     display: flex;
-    gap: 50px; /* Расстояние между элементами списка */
-    margin-left: 229px; /* Отступ всего списка от логотипа */
+    gap: 50px; 
+    margin-left: 229px; 
 }
 
-/* .main-header-logo img {
-    /* vertical-align: middle; */
- */
  .main-header-logo {
-    display: inline-block; /* Сохраняет логотип на месте */
+    display: inline-block; 
 }
 .main-header-nav ul {
     display: flex;

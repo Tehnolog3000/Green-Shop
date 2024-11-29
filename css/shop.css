@@ -173,7 +173,7 @@ aside nav h2{
 .slider-container input[type="range"]::-webkit-slider-runnable-track {
     height: 2px;
     /* border: 2px solid rgba(70, 163, 88, 1) */
-    background-color: lightgray;  /* Нейтральный цвет фона */
+    background-color: lightgray;  
     border: none;
     border-radius: 3px;
 }
@@ -256,8 +256,8 @@ aside nav h2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 28px; /* Горизонтальный отступ */
-    row-gap: 70px;    /* Вертикальный отступ */
+    column-gap: 28px; 
+    row-gap: 70px;    
     margin-top: 31px;
     align-items: stretch;
     
@@ -377,8 +377,8 @@ button{
 }
 
 .pagination li:last-child a {
-    justify-content: center; /* Центрируем изображение по горизонтали */
-    align-items: center; /* Центрируем изображение по вертикали */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .pagination a.active {
