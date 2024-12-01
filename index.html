@@ -4,34 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Greenshop</title>
-    <link rel="icon" href="./img/greenshop.svg" type="image/x-icon" />
+    <!-- <link rel="icon" href="./img/greenshop.svg" type="image/x-icon" /> -->
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/shop.css">
-    <link rel="stylesheet" href="./css/blog.css">
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/fonts.css" />
+     <link rel="stylesheet" href="./css/fonts.css" />
+    <style>
+      html {scroll-behavior: smooth;}
+  </style>
   </head>
   <body>
-    <header>
+    <header id="start">
       <div class="main-header">
         <nav class="main-header-nav">
           <a class="main-header-logo" href="index.html">
             <img src="./img/main/logo.svg" alt="logo"
           /></a>
           <ul class="main-menu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
             <li>
               <a href="#">Plant Care</a>
-              <ul class="list-menu-1">
+              <ul class="drop-menu-1">
                 <li><a href="#">Drainage</a></li>
                 <li><a href="#">Fungicides</a></li>
                 <li><a href="#">Fertilizer</a></li>
-                <li class="last-li">
-                  <a class="last-a" href="#">Priming</a>
-                  <ul class="list-menu-2">
+                <li class="drop-li">
+                  <a class="drop-a" href="#">Priming</a>
+                  <ul class="drop-menu-2">
                     <li><a href="#">Universal</a></li>
                     <li><a href="#">For Ficus</a></li>
                     <li><a href="#">For Cacti</a></li>
@@ -43,16 +42,40 @@
               </ul>
             </li>
 
-            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="#blog">Blogs</a></li>
           </ul>
-          <a class="main-header-logout" href="login.html" target="_blank">
-            <img
-              class="main-header-img-out"
-              src="./img/main/logout.svg"
-              alt="Login"
-            />
-            <span class="main-header-login">Login</span>
-          </a>
+          <div class="login-block">
+            <div class="login-icons">
+              <button>
+                <a href="#">
+                  <svg width="20" height="20" class="icon-box">
+                    <use xlink:href="./sprite.svg#search">
+                    </use>
+                  </svg>
+                </a>
+              </button>
+              <button class="cart-button">
+                <a href="#">
+                  <svg width="24" height="24" class="icon-box">
+                    <use xlink:href="./sprite.svg#backet">
+                    </use>
+                  </svg>
+                  <span class="counter">6</span>
+                </a>
+              </button>
+            </div>
+            <div class="btn-login-block">
+                <a class="main-header-logout" href="login.html" target="_blank">
+                  <svg class="main-header-img-out" width="20" height="20">
+                    <use xlink:href="./sprite.svg#login">
+                    </use>
+                </svg>
+                  <span class="main-header-login">Login</span>
+                </a>
+            </div>            
+          </div>
+        </div>
+
         </nav>
       </div>
     </header>
@@ -69,7 +92,8 @@
               trendy plants. Use <br>our plants to create an unique Urban Jungle.
               Order your favorite plants!
             </p>
-            <button class="btn-show"><span>SHOP NOW</span></button>
+            <a href="#"><button class="btn-show"><span>SHOP NOW</span></button></a>
+            
           </div>
 
           <div class="right-side">
@@ -81,7 +105,7 @@
 
       
 
-      <section>
+      <section id="shop">
         <div class="container container-shop-wrapper">
             <aside class="sidebar">
                 <nav class="menu">
@@ -99,10 +123,14 @@
                     </ul>
                     <div class="price-range">
                         <h2>Price Range</h2>
-                        <div class="slider-container">
-                            <input type="range" id="min-price" min="0" max="1500" value="39" step="1">
-                            <input type="range" id="max-price" min="0" max="1500" value="1230" step="1">
+                        <div class="slider-wrapper">
+                          <div class="slider-container">
+                            <input type="range" id="slider-left" min="0" max="1500" value="39" step="1">
+                            <input type="range" id="slider-righ" min="0" max="1500" value="1230" step="1">
                         </div>
+                        </div>
+                        
+
                         <p class="p-price">Price: <span class="span-price">$39 - $1230</span></p>
                         <button class="filter-btn">Filter</button>
                     </div>
@@ -144,9 +172,21 @@
                             <img src="./img/shop/image_1.png" alt="Barberton Daisy">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Barberton Daisy</h3>
                         <p class="product-price">$119.00</p>
@@ -156,9 +196,21 @@
                             <img src="./img/shop/image_2.png" alt="Angel Wing Begonia">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Angel Wing Begonia</h3>
                         <p class="product-price">$169.00</p>
@@ -171,9 +223,21 @@
                             <img src="./img/shop/image_3.png" alt="African Violet">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">African Violet</h3>
                         <p class="product-price">$199.00</p>
@@ -183,9 +247,21 @@
                             <img src="./img/shop/image_4.png" alt="Beach Spider Lily">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Beach Spider Lily</h3>
                         <p class="product-price">$129.00</p>
@@ -195,9 +271,21 @@
                             <img src="./img/shop/image_5.png" alt="Blushing Bromeliad">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Blushing Bromeliad</h3>
                         <p class="product-price">$139.00</p>
@@ -207,9 +295,21 @@
                             <img src="./img/shop/image_6.png" alt="Aluminum Plant">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Aluminum Plant</h3>
                         <p class="product-price">$179.00</p>
@@ -219,21 +319,45 @@
                             <img src="./img/shop/image_7.png" alt="Bird's Nest Fern">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Bird's Nest Fern</h3>
-                        <p class="product-price">$90.00</p>
+                        <p class="product-price">$99.00</p>
                     </div>
                     <div class="product-card">
                         <div class="img-wrap">
                             <img src="./img/shop/image_8.png" alt="Broadleaf Lady Palm">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Broadleaf Lady Palm</h3>
                         <p class="product-price">$59.00</p>
@@ -243,28 +367,48 @@
                             <img src="./img/shop/image_9.png" alt="Chinese Evergreen">
                         </div>
                         <div class="card-button">
-                            <button><img class="img-btn" src="./img/shop/icons/buy.svg" alt="Buy"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/heart.svg" alt="Like"></button>
-                            <button><img class="img-btn" src="./img/shop/icons/lupa.svg" alt="Zoom"></button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#backet"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#favorites"></use>
+                            </svg>
+                          </button>
+                          <button>
+                            <svg width="20" height="20" class="icon-box">
+                              <use href="./sprite.svg#search"></use>
+                            </svg>
+                          </button>
                         </div>
                         <h3 class="product-name">Chinese Evergreen</h3>
                         <p class="product-price">$39.00</p>
                     </div>
 
                 </div>
-                <nav class=" pagination">
-                  <ul>
-                      <li><a href="#" class="active">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#" aria-label="Next"><img src="./img/shop/arrow-right 2.svg" alt="Next"></a></li>
-                  </ul>
-              </nav>
+                
             </section>
-        
       </section>
-      <section class="container blog-container">
+      <section class="container">
+            <div>
+              <nav class=" pagination">
+                <ul>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#" aria-label="Next">
+                      <svg width="18" height="18">
+                      <use xlink:href="./sprite.svg#right-arrow">
+                      </use>
+                  </svg></a></li>
+                </ul>
+            </nav>
+            </div>
+      </section>
+      <section class="container blog-container" id="blog">
         <div class="section-1">
           <div class="block-child">
             <div class="image-container">
@@ -275,7 +419,10 @@
               <p>We are an online plant shop offering a wide <br>range of cheap and trendy plants</p>
               <a class="link-find" href="#">
                 <span class="find">Find More</span>
-                <img class="arrow-style" src="./img/blog/Arrow-white.svg" alt="" />
+                <svg class="arrow-style" width="18" height="18">
+                  <use xlink:href="./sprite.svg#long-arrow">
+                  </use>
+              </svg>
               </a>
             </div>
           </div>
@@ -289,58 +436,15 @@
               <p>We are an online plant shop offering a wide <br>range of cheap and trendy plants</p>
               <a class="link-find" href="#">
                 <span class="find">Find More</span>
-                <img class="arrow-style" src="./img/blog/Arrow-white.svg" alt="" />
+                <svg class="arrow-style" width="18" height="18">
+                  <use xlink:href="./sprite.svg#long-arrow">
+                  </use>
+              </svg>
               </a>
             </div>
           </div>
         </div>
-        <!-- <div class="section-1">
-          <div class="block-child-1">
-            <div>
-              <img src="./img/blog/image 14.png" alt="summer cactus" />
-            </div>
-            <div class="content-1">
-              <h3>
-                Summer cactus <br />
-                & succulents
-              </h3>
-              <p>
-                We are an online plant shop offering a wide range of cheap and
-                trendy plants
-              </p>
-              <a class="link-find" href="#">
-                <span class="find">Find More</span>
-                <img
-                  class="arrow-style"
-                  src="./img/blog/Arrow-white.svg"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-          <div class="block-child-1">
-            <div>
-              <img src="./img/blog/image 15.png" alt="styling trends" width="287" height="292" />
-            </div>
-            <div class="content-1">
-              <h3>
-                Styling Trends <br />
-                & much more
-              </h3>
-              <p>
-                We are an online plant shop offering a wide range of cheap and trendy plants
-              </p>
-              <a class="link-find" href="#">
-                <span class="find">Find More</span>
-                <img
-                  class="arrow-style"
-                  src="./img/blog/Arrow-white.svg"
-                  alt="Find More"
-                />
-              </a>
-            </div>
-          </div>
-        </div> -->
+
         <div class="section-2">
           <div class="tittle-section">
             <div class="tittle">
@@ -359,17 +463,16 @@
               </div>
               <div class="content-2">
                 <span class="span-2">September 12 I Read in 6 minutes</span>
-                <h3>Cactus & Succulent Care Tips</h3>
+                <h3>Cactus & Succulent <br> Care Tips</h3>
                 <p>
                   Cacti are succulents are easy care plants for any home or patio.
                 </p>
-                <a class="link-find" href="#">
-                  <span class="find">Read More</span>
-                  <img
-                    class="arrow-style"
-                    src="./img/blog/Arrow-gray.svg"
-                    alt="Read More"
-                  />
+                <a class="read-more" href="#">
+                  <span class="read">Read More</span>
+                  <svg class="arrow-style" width="16" height="16">
+                    <use xlink:href="./sprite.svg#white-arrow">
+                    </use>
+                </svg>
                 </a>
               </div>
             </div>
@@ -380,15 +483,14 @@
   
               <div class="content-2">
                 <span class="span-2">September 13 I Read in 2 minutes</span>
-                <h3>Top 10 Succulents for Your Home</h3>
+                <h3>Top 10 Succulents for <br>Your Home</h3>
                 <p>Best in hanging baskets. Prefers medium to high light.</p>
-                <a class="link-find" href="#">
-                  <span class="find">Read More</span>
-                  <img
-                    class="arrow-style"
-                    src="./img/blog/Arrow-gray.svg"
-                    alt="Read More"
-                  />
+                <a class="read-more" href="#">
+                  <span class="read">Read More</span>
+                  <svg class="arrow-style" width="16" height="16">
+                    <use xlink:href="./sprite.svg#white-arrow">
+                    </use>
+                </svg>
                 </a>
               </div>
             </div>
@@ -405,13 +507,12 @@
                 <p>
                   Cacti and succulents thrive in containers and because most are.
                 </p>
-                <a class="link-find" href="#">
-                  <span class="find">Read More</span>
-                  <img
-                    class="arrow-style"
-                    src="./img/blog/Arrow-gray.svg"
-                    alt="Read More"
-                  />
+                <a class="read-more" href="#">
+                  <span class="read">Read More</span>
+                  <svg class="arrow-style" width="16" height="16">
+                    <use xlink:href="./sprite.svg#white-arrow">
+                    </use>
+                </svg>
                 </a>
               </div>
             </div>
@@ -421,15 +522,14 @@
               </div>
               <div class="content-2">
                 <span class="span-2">September 15 I Read in 2 minutes</span>
-                <h3>Best Houseplants Room by Room</h3>
+                <h3>Best Houseplants <br> Room by Room</h3>
                 <p>The benefits of houseplants are endless. In addition to..</p>
-                <a class="link-find" href="#">
-                  <span class="find">Read More</span>
-                  <img
-                    class="arrow-style"
-                    src="./img/blog/Arrow-gray.svg"
-                    alt="Read More"
-                  />
+                <a class="read-more" href="#">
+                  <span class="read">Read More</span>
+                  <svg class="arrow-style" width="16" height="16">
+                    <use xlink:href="./sprite.svg#white-arrow">
+                    </use>
+                </svg>
                 </a>
               </div>
             </div>
@@ -475,7 +575,8 @@
                 name=""
                 id=""
               />
-              <button class="btn-join"><span>Join</span></button>
+              <a href="#"><button class="btn-join"><span>Join</span></button></a>
+              
             </div>
             <p class="input-desc">
               We usually post offers and challenges in newsletter. We’re your
@@ -489,22 +590,33 @@
       <section>
         <div class="contact-block">
           <div class="contact-item">
-            <img src="./img/main/logo.svg" alt="logo" />
+            <a href="#start">
+              <img src="./img/main/logo.svg" alt="logo"
+            /></a>
           </div>
 
           <div class="contact-item">
-            <img src="./img/footer/geo.svg" alt="geo" />
+            <svg  width="20" height="20">
+              <use href="./sprite.svg#location">
+              </use>
+          </svg>
             <span
               >70 West Buckingham Ave. <br />
               Farmingdale, NY 11735</span
             >
           </div>
           <div class="contact-item">
-            <img src="./img/footer/mail.svg" alt="mail" />
+            <svg width="20" height="20">
+              <use xlink:href="./sprite.svg#messange">
+              </use>
+          </svg>
             <a href="#"><span>contact@greenshop.com</span></a>
           </div>
           <div class="contact-item">
-            <img src="./img/footer/calling.svg" alt="phone" />
+            <svg width="20" height="20">
+              <use xlink:href="./sprite.svg#calling">
+              </use>
+          </svg>
             <span>+88 01911 717 490</span>
           </div>
         </div>
@@ -548,24 +660,38 @@
                 <div class="social-item">
                     <h2>Social Media</h2>
                     <div class="social-icons">
-                        <a href=""
-                ><img src="./img/footer/facebook.svg" alt="facebook"
-              /></a>
-              <a href=""
-                ><img src="./img/footer/instagram.svg" alt="instagram"
-              /></a>
-              <a href=""
-                ><img src="./img/footer/twitter.svg" alt="twitter"
-              /></a>
-              <a href=""
-                ><img src="./img/footer/linkedin.svg" alt="lindedIN"
-              /></a>
-              <a href=""
-                ><img src="./img/footer/union.svg" alt="youtube"
-              /></a>
-                    </div>
-              
-            </div>
+                        <a href="https://facebook.com/" target="_blank">
+                          <svg width="8" height="16" class="soc-icon">
+                            <use xlink:href="./sprite.svg#facebook">
+                            </use>
+                          </svg>
+                        </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <svg width="16" height="16" class="soc-icon">
+                  <use xlink:href="./sprite.svg#instagram">
+                  </use>
+              </svg>
+            </a>
+              <a href="https://x.com/" target="_blank">
+                <svg width="16" height="13" class="soc-icon">
+                  <use xlink:href="./sprite.svg#twitter">
+                  </use>
+              </svg>
+            </a>
+              <a href="https://ua.linkedin.com" target="_blank">
+                <svg width="16" height="16" class="soc-icon">
+                  <use xlink:href="./sprite.svg#linkedin">
+                  </use>
+              </svg>
+            </a>
+              <a href="#">
+                <svg width="19" height="14" class="soc-icon">
+                  <use xlink:href="./sprite.svg#union">
+                  </use>
+                </svg>
+              </a>
+            </div> 
+          </div>
                         
             <div class="social-item">
               <h2>We accept</h2>
@@ -575,7 +701,7 @@
         </div>
       </section>
       <div class="copyright">
-        <small>&copy; 2024 GreenShop. All Rights Reserved.</small>
+        <span class="copy">&copy; 2024 GreenShop.  All  Rights  Reserved.</span>
     </div>
     </footer>
   </body>
