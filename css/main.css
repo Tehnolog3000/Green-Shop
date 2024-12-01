@@ -334,7 +334,6 @@ section .right-side img {
 
 .sidebar {
   width: 310px;
-  background-color: red;
   background-color: #fbfbfb;
 }
 
@@ -741,17 +740,17 @@ aside nav h2 {
 
 .image-container {
   position: absolute;
-  bottom: -20px; /* Позволяет выходить за пределы блока сверху */
-  left: 0; /* Прижимаем к левому краю */
+  bottom: -20px; 
+  left: 0; 
 }
 
 .image-container img {
   position: absolute;
-  bottom: 20px; /* Выглядывает сверху */
+  bottom: 20px; 
   left: 0;
-  width: auto; /* Сохраняем исходный размер картинки */
+  width: auto; 
   height: auto; 
-  max-height: 300px; /* Контролируем максимальную высоту */
+  max-height: 300px; 
 }
 
 .content {
@@ -778,7 +777,7 @@ aside nav h2 {
   right: 30px;
   font-size: 14px;
   line-height: 20px;
-  width: calc(100% - 60px); /* Учитываем отступы */
+  width: calc(100% - 60px);
 }
 
 .link-find {
@@ -796,7 +795,7 @@ aside nav h2 {
   transition: transform 0.3s ease;
 }
 .link-find:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Тень при наведении */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .link-find:hover .find{
   font-size: 15px;
@@ -1315,6 +1314,7 @@ text-align: left;
 .icon-box {
     fill: rgba(61, 61, 61, 1); 
     transition: fill 0.3s;
+    
 }
 
 
