@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <link rel="icon" href="./img/greenshop.svg" type="image/x-icon" />
+    <link rel="icon" href="./img/main/greenshop.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/login.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
   </head>
   <body class="body--style">
+    <div class="preloader"></div>
     <a href="index.html">
       <svg width="18" height="18" class="close--img">
         <use href="./sprite.svg#close"></use>
@@ -52,6 +53,15 @@
         required
         placeholder="Confirm password"
       />
+      <div class="inputs">
+        <div><input type="checkbox" name="c1" id="c1"><label for="c1">Please confirm that you are human</label></div>
+        <div><input type="radio" name="r1" id="r1"><label for="r1">Do you like flowers?</label></div>
+        <div><input type="checkbox" class="switch" name="s1" id="s1"><label for="s1">Are you over 18 years old?</label></div>
+      </div>
+      
+      
+      
+      
 
       <button class="btn--style" type="submit">Register</button>
 
@@ -74,5 +84,11 @@
         <span class="span--social">Continue with Facebook</span></a>
       </button>
     </form>
+    <script>
+      window.addEventListener("load", function() {
+          const preloader = document.querySelector('.preloader');
+          preloader.style.display = 'none'; // Скрываем прелоадер после загрузки страницы
+      });
+  </script>
   </body>
 </html>
