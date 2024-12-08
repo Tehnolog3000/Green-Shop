@@ -1487,8 +1487,24 @@ text-align: left;
   transform: rotate(90deg);
   top: 0;
 }
+#menu__toggle {
+  display: none;
+}
 
-#menu__toggle:checked ~ .main-menu {
-  display: block;
-  padding: 10px 0;
+
+.mobile-menu {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#menu__toggle:checked ~ .mobile-menu {
+  display: block !important;
 }
