@@ -276,6 +276,7 @@ section .right-side img {
   color: #3d3d3d ;
 }
 
+
 .title-2 {
   color: #46a358;
 }
@@ -798,75 +799,53 @@ aside nav h2 {
   display: flex;
   justify-content: space-between;
   gap: 26px;
+  flex-wrap: wrap;
 }
 
 .block-child {
-  position: relative;
   background: rgba(251, 251, 251, 1);
   width: 586px;
-  height: 250px;
-  overflow: hidden;
-  padding-right: 30px;
-  overflow: visible;
+  
+  height: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
 }
+
 
 .image-container {
-  position: absolute;
-  bottom: -20px; 
-  left: 0;
-}
-
-
-.blog-container:target .icl{
-  opacity: 0;
-  animation: backInLeft 1s ease-out forwards;
-}
-.blog-container:target .icr{
-  opacity: 0;
-  animation: backInRight 1s ease-out forwards;
+  flex-shrink: 1;
+  max-width: 100%;
 }
 
 .image-container img {
-  position: absolute;
-  bottom: 20px; 
-  left: 0;
-  width: auto; 
-  height: auto; 
-  max-height: 300px; 
+  max-width: 100%;;
+  height: auto;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   text-align: right;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .block-child h3 {
-  position: absolute;
-  top: 37px;
-  right: 30px;
-  text-transform: uppercase;
   font-size: 18px;
   font-weight: 900;
   color: #3d3d3d;
+  margin-bottom: 10px;
 }
 
 .block-child p {
-  position: absolute;
-  top: 94px;
-  right: 30px;
   font-size: 14px;
   line-height: 20px;
-  width: calc(100% - 60px);
+  margin-bottom: 20px;
 }
 
 .link-find {
-  position: absolute;
-  bottom: 46px;
-  right: 30px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 140px;
@@ -874,16 +853,16 @@ aside nav h2 {
   border-radius: 6px;
   background: #46a358;
   color: #ffffff;
-  transition: transform 0.3s ease;
+  margin-left: 50px;
+
 }
+
 .link-find:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .link-find:hover .find{
   font-size: 15px;
 }
-
-
 
 
 .arrow-style {
@@ -928,7 +907,7 @@ aside nav h2 {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  text-align: right;
+  text-align: center;
 
 }
 
@@ -1507,4 +1486,21 @@ text-align: left;
 
 #menu__toggle:checked ~ .mobile-menu {
   display: block !important;
+}
+
+.mobile-menu {
+    margin: 0;
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .main-header-nav .mobile-menu li{
+  text-align: center;
+  padding-bottom: 5px;
+  height: auto;
 }
