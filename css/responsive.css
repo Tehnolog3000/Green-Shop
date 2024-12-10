@@ -2,23 +2,11 @@
   .sidebar {
     display: none;
   }
+
 }
 @media (min-width: 993px) {
- 
   .main-header-nav .menu__btn {
     display: none;
-  }
-  .main-header-nav > ul > li > a::after {
-    transition: none; 
-  }
-
-  .main-header-nav > ul > li:hover > a::after {
-    transform: none; 
-    left: 0;         
-  }
-
-  .main-header-nav > ul > li:hover > a {
-    font-weight: normal;
   }
 
   .main-header-nav #menu__toggle{
@@ -37,7 +25,20 @@
   .main-header-logo img{
     padding-left: 12px;
   }
- 
+  body{
+    padding-top: 36px;
+  }
+  .main-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin-top: 0px;
+   
+    z-index: 10000;
+  }
+ .main-header-logo{
+  padding-top: 5px;
+ }
   
   .main-header-nav .main-menu{
     display: none;
@@ -48,15 +49,19 @@
   .main-header-nav .menu__btn{
     left: auto;
     right: 20px;
-    top: 40px;
+    top: 21px;
   }
 
+  .main-header-nav{
+    background-color: white;
+    opacity: 1;
+  }
   .login-icons {
     display: flex;
-  }
-  .login-block{
-    margin-left: 40px;
-    width: 100%;
+    padding-right: 70px;
+    padding-left: 7px;
+    padding-top: 10px;
+    gap: 10px;
   }
 
   .icon {
@@ -66,9 +71,14 @@
   .btn-login-block{
     display: none;
   }
+  .mobile-menu{
+    display: flex;
+    justify-content: center;
+  }
   .main-header-logout{
-      width: 100%;
-      margin-top: 10px;
+      margin-left: 0px;               
+  width: auto;
+      
     }
   }
 
@@ -95,7 +105,7 @@
       padding: 40px 20px;
     }
   
-    /* Убираем анимацию */
+   
     .welcome,
     .title-1 {
       animation: none;
@@ -121,15 +131,6 @@
 
 
   @media (max-width: 1122px) {
-    /* .title-1{
-      font-size: 40px;
-      line-height: 40px;
-    }
-    .descrip{
-      line-height: 10px;
-      padding-top: 12px;
-      padding-bottom: 16px;
-    } */
     .container-tittle .left-side{
       padding: 12px 12px;
     }
