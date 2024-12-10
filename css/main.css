@@ -655,7 +655,6 @@ aside nav h2 {
   max-width: 258px;
   position: relative;
   border-top: 1px solid transparent;
-  opacity: 0; /* Изначально скрыты */
   transform: translateY(20px);
 }
 

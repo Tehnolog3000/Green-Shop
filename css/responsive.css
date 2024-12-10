@@ -37,6 +37,8 @@
   .main-header-logo img{
     padding-left: 12px;
   }
+ 
+  
   .main-header-nav .main-menu{
     display: none;
   }
@@ -51,10 +53,10 @@
 
   .login-icons {
     display: flex;
-    padding-left: 30px;
   }
   .login-block{
     margin-left: 40px;
+    width: 100%;
   }
 
   .icon {
@@ -70,8 +72,56 @@
     }
   }
 
+  @media (max-width: 992px) {
+    .title-1 {
+      font-size: 50px;
+      line-height: 55px;
+    }
+  
+    .left-side {
+      padding: 50px 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title-1 {
+      font-size: 40px;
+      line-height: 45px;
+    }
+  
+  
+    .left-side {
+      max-width: 100%;
+      padding: 40px 20px;
+    }
+  
+    /* Убираем анимацию */
+    .welcome,
+    .title-1 {
+      animation: none;
+    }
+    .hide-on-small {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title-1 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  
+    .descrip {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+
+
+
   @media (max-width: 1122px) {
-    .title-1{
+    /* .title-1{
       font-size: 40px;
       line-height: 40px;
     }
@@ -79,7 +129,7 @@
       line-height: 10px;
       padding-top: 12px;
       padding-bottom: 16px;
-    }
+    } */
     .container-tittle .left-side{
       padding: 12px 12px;
     }
