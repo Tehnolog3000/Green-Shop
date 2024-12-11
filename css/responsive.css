@@ -308,3 +308,9 @@
     font-size: 12px;
   }
 }
+@media (max-width: 320px) {
+  .input-div {
+    max-width: 320px;
+    padding-left: 12px;
+  }
+}
