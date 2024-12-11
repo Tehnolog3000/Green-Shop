@@ -20,7 +20,7 @@
 
 @media (max-width: 992px) {
   .big-image {
-    padding-top: 72px;
+    padding-top: 50px;
   }
   .main-header-logo img{
     padding-left: 12px;
@@ -97,15 +97,8 @@
     .title-1 {
       font-size: 40px;
       line-height: 45px;
-    }
-  
-  
-    .left-side {
-      max-width: 100%;
-      padding: 40px 20px;
-    }
-  
-   
+    }  
+
     .welcome,
     .title-1 {
       animation: none;
@@ -114,6 +107,31 @@
       display: none;
     }
   }
+
+  @media (max-width: 480px) {
+    .container-tittle .left-side{
+      max-width: 100%;
+      width: 100%;
+      float: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .container-tittle .right-side{
+      width: 100%;
+      float: none;
+      display: flex;
+      flex-direction: column;
+    }
+    section .right-side{
+      max-width: 100%;
+    }
+    .small-image{
+      display: none;
+    }
+    .big-image {
+      padding-top: 20px;
+    }
+}
   
   @media (max-width: 480px) {
     .title-1 {

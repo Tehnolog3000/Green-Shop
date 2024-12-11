@@ -282,6 +282,7 @@ section .right-side img {
 }
 
 .descrip {
+  display: flex;
   margin-top: 5px;
   padding-bottom: 44px;
   font-size: clamp(10px, 2vw, 14px); 
